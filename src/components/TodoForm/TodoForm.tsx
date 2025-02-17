@@ -1,6 +1,7 @@
 import { FC, FormEvent, useState } from "react";
-import "./TodoForm.css";
 import { ActivityType, TodoItem } from "../../types/todo";
+
+import "./TodoForm.css";
 
 interface TodoFormProps {
   add: (todo: TodoItem) => void;
@@ -25,12 +26,12 @@ const TodoForm: FC<TodoFormProps> = ({ add }) => {
 
     add(newTodo);
 
-    // Clear Form
-    // setActivity("");
-    // setPrice(0);
-    // setType(ActivityType.EDUCATION);
-    // setBookingRequired(false);
-    // setAccessibility(0.5);
+    // Reset Form
+    setActivity("");
+    setPrice(0);
+    setType(ActivityType.EDUCATION);
+    setBookingRequired(false);
+    setAccessibility(0.5);
   };
 
   return (
@@ -84,9 +85,13 @@ const TodoForm: FC<TodoFormProps> = ({ add }) => {
           </select>
         </section>
 
-        <section className="inputCont">
-          <label className="formLabel">Booking Required?</label>
+        <section
+          className="inputCont"
+          style={{ flexDirection: "row", alignItems: "center" }}
+        >
+          <label className="formLabel">Booking Required ?</label>
           <input
+            style={{ marginLeft: "12px" }}
             type="checkbox"
             checked={bookingRequired}
             onChange={(e) => setBookingRequired(e.target.checked)}
@@ -94,7 +99,7 @@ const TodoForm: FC<TodoFormProps> = ({ add }) => {
         </section>
 
         <section className="inputCont">
-          <label className="formLabel">Booking Required?</label>
+          <label className="formLabel">Accessibility: {accessibility}</label>
           <input
             type="range"
             min="0"
