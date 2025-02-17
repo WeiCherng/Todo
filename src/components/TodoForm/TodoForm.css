@@ -1,0 +1,19 @@
+#todoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#submitBtn {
+  margin-top: 6px;
+  float: right;
+}
+
+.inputCont {
+  margin: 6px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
