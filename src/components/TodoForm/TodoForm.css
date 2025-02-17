@@ -3,6 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  border: 1px solid white;
+  border-radius: 12px;
+  margin: 12px 0;
+  padding: 12px 24px;
 }
 
 #submitBtn {
